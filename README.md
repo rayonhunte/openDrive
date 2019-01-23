@@ -1,5 +1,14 @@
 # OpenDrive
 
+## Description
+
+This is a public version of a private project, that demos user Auth using Firebase, AngularFire2 and Angular7.
+
+## Work In Progress
+
+I am still working on this, as I refine this aspect of the project I will update this repository.
+[I am also working on a video that I will post to my YouTube Page] (https://www.youtube.com/channel/UCIkteVnhcbJJjBA6gTTEtjQ?view_as=subscriber)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
 
 ## Development server

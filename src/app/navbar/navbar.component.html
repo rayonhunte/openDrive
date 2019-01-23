@@ -1,0 +1,29 @@
+<div class="col">
+  <nav class="navbar  navbar-expand-sm navbar-dark bg-primary">
+    <a class="navbar-brand" routerLink="/">Open Drive</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="navbar-nav">
+        <ng-template [ngIf]="!(authStatus$ | async)">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+        </ng-template>
+        <ng-template [ngIf]="(authStatus$ | async)">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/reports">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logOut()" style="cursor: pointer;">Logout</a>
+          </li>
+        </ng-template>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Help</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
